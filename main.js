@@ -156,16 +156,6 @@ eldaraja.addEventListener("click", () =>{
 
 
 
-
-
-
-
-
-
-
-
-
-
 function rem1(){
     input = input.replace(/.$/, "");
     document.getElementById('output').innerHTML = input;
