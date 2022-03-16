@@ -31,6 +31,55 @@ let elfoiz = document.getElementById("foiz")
 let eldaraja = document.getElementById("daraja")
 
 
+
+let btnmath = document.querySelector("#btn-math")
+
+let sum = ""
+
+
+
+// one.addEventListener("click", (e) =>{
+  //   ekran.textContent = sum
+  //   sum += one.textContent
+  //   // var floor = Math.floor;
+  //   // var x = floor(parseFloat(sum));
+//   // console.log(x);
+// })
+
+// qosh.addEventListener("click", (e) =>{
+//   ekran.textContent = sum
+//   sum += qosh.textContent
+// })
+
+// two.addEventListener("click", (e) =>{
+  //   ekran.textContent = sum
+//   sum += two.textContent
+// })
+// console.log(`${sum} + ${sum1}`);
+
+
+icons.addEventListener("click", () =>{
+  icons.classList.toggle("shovs")
+  btnmath.classList.toggle("positions")
+})
+
+
+let input = "";
+function showValue(btn) {
+  input += btn.value;
+    document.getElementById('output').innerHTML = input;
+  }
+  function doMath(){
+    document.getElementById('output').innerHTML = eval(input)
+    input ="";
+  }
+  function reset(){
+    document.getElementById('output').innerHTML = "0";
+    input="";
+}
+
+
+
 sin.addEventListener("click", () =>{
   ekran.innerHTML=Math.sin(ekran.innerHTML);
 })
@@ -79,51 +128,44 @@ eldaraja.addEventListener("click", () =>{
 })
 
 
-let btnmath = document.querySelector("#btn-math")
-
-let sum = ""
 
 
 
-// one.addEventListener("click", (e) =>{
-//   ekran.textContent = sum
-//   sum += one.textContent
-//   // var floor = Math.floor;
-//   // var x = floor(parseFloat(sum));
-//   // console.log(x);
-// })
-
-// qosh.addEventListener("click", (e) =>{
-//   ekran.textContent = sum
-//   sum += qosh.textContent
-// })
-
-// two.addEventListener("click", (e) =>{
-//   ekran.textContent = sum
-//   sum += two.textContent
-// })
-// console.log(`${sum} + ${sum1}`);
 
 
-icons.addEventListener("click", () =>{
-  icons.classList.toggle("shovs")
-  btnmath.classList.toggle("positions")
-})
 
 
-let input = "";
-function showValue(btn) {
-    input += btn.value;
-    document.getElementById('output').innerHTML = input;
-}
-function doMath(){
-    document.getElementById('output').innerHTML = eval(input)
-    input ="";
-}
-function reset(){
-    document.getElementById('output').innerHTML = "0";
-    input="";
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function rem1(){
     input = input.replace(/.$/, "");
     document.getElementById('output').innerHTML = input;
