@@ -12,26 +12,27 @@
 
 <body>
   <div id="content">
-    <div id="ekran">vv</div>
+    <!-- <div id="ekran">vv</div> -->
+    <div id="output">0</div>
     <div class="btn-group">
-      <button id="one" class="btn buttonss" value="1">1</button>
-      <button id="two" class="btn buttonss">2</button>
-      <button id="three" class="btn buttonss ">3</button>
-      <button id="four" class="btn buttonss">4</button>
-      <button id="five" class="btn buttonss">5</button>
-      <button id="six" class="btn buttonss">6</button>
-      <button id="seven" class="btn buttonss">7</button>
-      <button id="eight" class="btn buttonss">8</button>
-      <button id="nine" class="btn buttonss">9</button>
-      <button id="iks" class="btn buttonss">x</button>
-      <button id="nul" class="btn buttonss">0</button>
-      <button id="dot" class="btn buttonss">.</button>
-      <button id="bol" class="btn buttonss">/</button>
-      <button id="kopaytir" class="btn buttonss">*</button>
-      <button id="qosh" class="btn buttonss">+</button>
-      <button id="minus" class="btn buttonss">-</button>
-      <button id="teng" class="btn buttonss">=</button>
-      <button id="clearall" class="btn buttonss">AC</button>
+      <button id="one" class="btn buttonss" value='1' onclick='showValue(this)'>1</button>
+      <button id="two" class="btn buttonss" value='2' onclick='showValue(this)'>2</button>
+      <button id="three" class="btn buttonss " value='3' onclick='showValue(this)'>3</button>
+      <button id="four" class="btn buttonss nn" value='4' onclick='showValue(this)'>4</button>
+      <button id="five" class="btn buttonss mm" value='5' onclick='showValue(this)'>5</button>
+      <button id="six" class="btn buttonss" value='6' onclick='showValue(this)'>6</button>
+      <button id="seven" class="btn buttonss" value='7' onclick='showValue(this)'>7</button>
+      <button id="eight" class="btn buttonss" value='8' onclick='showValue(this)'>8</button>
+      <button id="nine" class="btn buttonss" value='9' onclick='showValue(this)'>9</button>
+      <button id="iks" class="btn buttonss" onclick='rem1()'><i class='bx bxs-tag-x'></i></button>
+      <button id="nul" class="btn buttonss" value='0' onclick='showValue(this)'>0</button>
+      <button id="dot" class="btn buttonss" value='.' onclick='showValue(this)'>.</button>
+      <button id="bol" class="btn buttonss" value='/' onclick='showValue(this)'>/</button>
+      <button id="kopaytir" class="btn buttonss" value='*' onclick='showValue(this)'>*</button>
+      <button id="qosh" class="btn buttonss" value='+' onclick='showValue(this)'>+</button>
+      <button id="minus" class="btn buttonss" value='-' onclick='showValue(this)'>-</button>
+      <button id="teng" class="btn buttonss" onclick='doMath()'>=</button>
+      <button id="clearall" class="btn buttonss" onclick='reset()'>AC</button>
       <button id="left-chevron" class="btn buttonss"><i class='bx bx-chevron-left'></i>
         
       </button>
@@ -46,7 +47,7 @@
         <button id="rightqavs" class="button-math">)</button>
         <button id="ildiz" class="button-math">√</button>
         <button id="e" class="button-math">e</button>
-        <button id="foiz" class="button-math">%</button>
+        <button id="foiz" class="button-math" valeu='%' onclick='showValue(this)'>%</button>
         <button id="daraja" class="button-math">daraja</button>
       </div>
 

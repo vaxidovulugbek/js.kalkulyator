@@ -1,4 +1,4 @@
-let ekran = document.getElementById("ekran")
+let ekran = document.getElementById("output")
 // let elone = document.querySelector(".btn");
 let one = document.querySelector("#one")
 let two = document.querySelector("#two")
@@ -17,29 +17,91 @@ let ayir = document.querySelector("#minus")
 let teng = document.querySelector("#teng")
 let icons = document.querySelector("#left-chevron")
 
+let sin = document.getElementById("sin")
+let cos = document.getElementById("cos")
+let tan = document.getElementById("tan")
+let factori = document.getElementById("factori")
+let pii = document.getElementById("pi")
+let ellog = document.getElementById("log")
+let elleftqavs = document.getElementById("leftqavs")
+let elrightqavs = document.getElementById("rightqavs")
+let elildiz = document.getElementById("ildiz")
+let ele = document.getElementById("e")
+let elfoiz = document.getElementById("foiz")
+let eldaraja = document.getElementById("daraja")
+
+
+sin.addEventListener("click", () =>{
+  ekran.innerHTML=Math.sin(ekran.innerHTML);
+})
+cos.addEventListener("click", () =>{
+  ekran.innerHTML=Math.cos(ekran.innerHTML);
+})
+tan.addEventListener("click", () =>{
+  ekran.innerHTML=Math.tan(ekran.innerHTML);
+})
+factori.addEventListener("click", () =>{
+  // ekran.innerHTML=Math.factorial(ekran.innerHTML);
+  function factorialize(num) {
+    if (num < 0) 
+          return -1;
+    else if (num == 0) 
+        return 1;
+    else {
+        return (num * factorialize(num - 1));
+    }
+  }
+  ekran.innerHTML=(factorialize(ekran.innerHTML));
+})
+pii.addEventListener("click", () =>{
+  ekran.innerHTML=(ekran.innerHTML * 3.14159265359);
+})
+ellog.addEventListener("click", () =>{
+  ekran.innerHTML=Math.log(ekran.innerHTML);
+})
+elleftqavs.addEventListener("click", () =>{
+  ekran.innerHTML= "(";
+})
+elrightqavs.addEventListener("click", () =>{
+  ekran.innerHTML= ")";
+})
+elildiz.addEventListener("click", () =>{
+  ekran.innerHTML=Math.sqrt(ekran.innerHTML);
+})
+ele.addEventListener("click", () =>{
+  ekran.innerHTML=Math.E(ekran.innerHTML);
+})
+ele.addEventListener("click", () =>{
+  ekran.innerHTML=(ekran.innerHTML * 2.718);
+})
+eldaraja.addEventListener("click", () =>{
+  ekran.innerHTML=Math.pow(ekran.innerHTML,ekran.innerHTML);
+})
+
 
 let btnmath = document.querySelector("#btn-math")
 
 let sum = ""
 
-one.addEventListener("click", (e) =>{
-  ekran.textContent = sum
-  sum += one.textContent
-  // var floor = Math.floor;
-  // var x = floor(parseFloat(sum));
-  // console.log(x);
 
-})
 
-qosh.addEventListener("click", (e) =>{
-  ekran.textContent = sum
-  sum += qosh.textContent
-})
+// one.addEventListener("click", (e) =>{
+//   ekran.textContent = sum
+//   sum += one.textContent
+//   // var floor = Math.floor;
+//   // var x = floor(parseFloat(sum));
+//   // console.log(x);
+// })
 
-two.addEventListener("click", (e) =>{
-  ekran.textContent = sum
-  sum += two.textContent
-})
+// qosh.addEventListener("click", (e) =>{
+//   ekran.textContent = sum
+//   sum += qosh.textContent
+// })
+
+// two.addEventListener("click", (e) =>{
+//   ekran.textContent = sum
+//   sum += two.textContent
+// })
 // console.log(`${sum} + ${sum1}`);
 
 
@@ -48,57 +110,39 @@ icons.addEventListener("click", () =>{
   btnmath.classList.toggle("positions")
 })
 
-// one.addEventListener("click", chiqar
-//   console.log("ok");
-// )
 
-// function chiqar (){
-//   alert("ppppp")
-// }
-
-
-
-function equal(){
-  if (cal.display.value == ""){
-    var eq = "";
-  }
-  else{
-    var eq = eval(cal.display.value);
-  }
-  cal.display.value = eq;
+let input = "";
+function showValue(btn) {
+    input += btn.value;
+    document.getElementById('output').innerHTML = input;
+}
+function doMath(){
+    document.getElementById('output').innerHTML = eval(input)
+    input ="";
+}
+function reset(){
+    document.getElementById('output').innerHTML = "0";
+    input="";
+}
+function rem1(){
+    input = input.replace(/.$/, "");
+    document.getElementById('output').innerHTML = input;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// news.appendChild(newtext)
-// let h1 = document.querySelector("#h1da")
-// container.insertBefore(news, h1)
-
-
-
-
-
-
-
-
-
+// function factorialize(num) {
+//   if (num < 0) 
+//         return -1;
+//   else if (num == 0) 
+//       return 1;
+//   else {
+//       return (num * factorialize(num - 1));
+//   }
+// }
+// console.log(factorialize(5));
+// factorialize(5);
 
 
 
